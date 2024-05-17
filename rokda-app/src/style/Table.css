@@ -1,0 +1,27 @@
+.Table {
+    text-align: center;
+    border: 1px solid;
+}
+
+.Table-header{
+    text-align: center;
+    /* color: darkgoldenrod; */
+}
+
+.Table-header-row{
+    text-wrap: wrap;
+    font-size: medium;
+    color: rgb(250, 249, 247);
+    
+ }
+
+.Table-body{
+    text-align: right;
+    font-size: small;
+    border-color: aliceblue;
+}
+
+/* .Table-body-cell{
+    text-wrap: wrap;
+    font-size: large;
+} */
