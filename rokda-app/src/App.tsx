@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './Style';
 import Table from './Components/Table';
+import WatchList from './Components/watchlist/WatchList';
 
 
 
@@ -19,6 +20,21 @@ const data = [
     ['1', 'ITC Ltd', 'ITC', '30', '100000', '150000', '220', '430', '50000', '50%']
   ];
 
+  const stocksData = [
+    {
+      symbol: 'ITC',
+      lastPrice: 100,
+      change: 10,
+      changePercentage: 10
+    },
+    {
+      symbol: 'HDFC',
+      lastPrice: 100,
+      change: 10,
+      changePercentage: 10
+    }
+  ];
+  
 
 
 
@@ -28,9 +44,19 @@ function App() {
       <header className="App-header">
         <a className='App-logo'> Rokda </a>
       </header>
+      
       <div className='App-body'>
-        <Table headers={headers} data={data}></Table>
+      <div className='App-menubar'> fjf</div>  
+      <div className='App-sidebar'>
+          <WatchList stocks={stocksData}></WatchList>
       </div>
+        
+        <div>
+           
+          <Table headers={headers} data={data}></Table>
+        </div>
+      </div>
+      
     </div>
   );
 }

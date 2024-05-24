@@ -1,0 +1,22 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "start",
+			"path": "rokda-app",
+			"problemMatcher": [],
+			"label": "npm: start - rokda-app",
+			"detail": "react-scripts start"
+		},
+		{
+			"type": "npm",
+			"script": "sass:watch",
+			"path": "rokda-app\\src",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: sass:watch - rokda-app",
+			"detail": "sass --watch --update .:."
+		}
+	]
+}
