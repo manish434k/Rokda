@@ -1,5 +1,5 @@
 .App {
-  background-color: #282c34;
+  background-color: black;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -21,48 +21,76 @@
 }
 
 .App-header {
-  background-color: #1f1c1c;
+  // background-color: #1f1c1c;
   min-height: 5vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: baseline;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(8px + 2vmin);
   color: white;
+  padding-left: 56px;
+  padding-top: 10px;
 }
 
 .App-body {
-  background-color: #282c34;
+  flex: auto;
+  // background-color: #282c34;
   display: flex;
   height: 100%;
   flex-direction: row;
   align-items: stretch;
   justify-content: flex-start;
- 
   color: white;
 }
 
 .App-sidebar {
   background-color: #282c34;
-  width: 15%;
+  width: 35%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  
+  align-items: baseline;
+  justify-content: flex-start;
   color: white;
+  border-right: 1px solid #525151;
+  border-left: 1px solid #525151;
+  box-shadow: 0 10px 50px #413737; /* Shadow on the right side */
 }
 
 .App-menubar {
-  background-color: #61dafb;
-  width: 4%;
+  flex:auto;
+  // background-color: #1f1c1c;
+  min-width: 5vh;
   min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   
+  &-item {
+    display: flex;
+    margin: 5px 15px 5px 5px;
+    filter: invert(100%);
+    transition: color 0.3s, background-color 0.3s;
+    padding: 1px;
+   
+    
+    &:hover {
+      background-color: rgb(14, 13, 13);
+    }
+    
+  }
+
+  &-button {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    align-items: center;
+    justify-content: flex-start;    
+    
+    border: aliceblue;
+  }
 }
 
 .App-link {

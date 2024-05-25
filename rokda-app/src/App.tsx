@@ -42,11 +42,21 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <a className='App-logo'> Rokda </a>
+        <div className='App-logo'>         
+          {"Rokda" }
+        </div>
       </header>
       
       <div className='App-body'>
-      <div className='App-menubar'> fjf</div>  
+      <div className='App-menubar'> 
+        <div className='App-menubar-item'>
+          <button className='App-menubar-button' title='Watchlist'>
+            <img width = "35px" height = "35px" src={require("./icons/list-icon.svg").default} alt='Watchlist'/>
+            
+          </button>
+        </div>
+        
+      </div>  
       <div className='App-sidebar'>
           <WatchList stocks={stocksData}></WatchList>
       </div>
