@@ -1,14 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './Style';
-import Table from './Components/Table';
+import Table from './Components/table/Table';
 import WatchList from './Components/watchlist/WatchList';
+import ResizableAndDraggableComponent from './Utils/slider';
 
 
 
 
-
-const headers = ['Sq.', 'Name', 'Symbol', 'Quantity', 'Net Cost', 'Current net value', 'Avg. buy price', 'Market price', 'Unrealised PnL', 'Unrealised PnL percent' ];
+const tableHeader= "Stocks-(India)";
+const headers = ['Sq.', 'Name', 'Symbol', 'Quantity', 'Net Cost', 'Current net value', 'Avg. buy price', 'Market price', 'Unrealised PnL', 'Unrealised PnL %' ];
 const data = [
     ['1', 'ITC Ltd', 'ITC', '30', '100000', '150000', '220', '430', '50000', '50%'],
     ['1', 'ITC Ltd', 'ITC', '30', '100000', '150000', '220', '430', '50000', '50%'],
@@ -47,23 +48,34 @@ function App() {
         </div>
       </header>
       
+      
+
       <div className='App-body'>
       <div className='App-menubar'> 
         <div className='App-menubar-item'>
-          <button className='App-menubar-button' title='Watchlist'>
+        <button className='App-menubar-button' title='Watchlist' onClick={() => {
+            const sidebar = document.querySelector('.App-sidebar') as HTMLElement;
+            sidebar.style.visibility = sidebar.style.visibility === 'hidden' ? 'visible' : 'hidden';
+          }}>
             <img width = "35px" height = "35px" src={require("./icons/list-icon.svg").default} alt='Watchlist'/>
-            
           </button>
         </div>
         
-      </div>  
-      <div className='App-sidebar'>
-          <WatchList stocks={stocksData}></WatchList>
       </div>
+      {/* <ResizableAndDraggableComponent  
+      children = {
+       <div/>
+      }
+      
+      /> */}
+      <div className='App-sidebar' style={{ visibility: 'hidden' }}>
+        <WatchList stocks={stocksData}></WatchList>
+      </div>
+      
         
-        <div>
+        <div className='App-mainarea'>
            
-          <Table headers={headers} data={data}></Table>
+          <Table tableHeader = {tableHeader} headers={headers} data={data}></Table>
         </div>
       </div>
       

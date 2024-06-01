@@ -39,6 +39,7 @@
   // background-color: #282c34;
   display: flex;
   height: 100%;
+  width: 100%;
   flex-direction: row;
   align-items: stretch;
   justify-content: flex-start;
@@ -47,7 +48,7 @@
 
 .App-sidebar {
   background-color: #282c34;
-  width: 35%;
+  width: 25%;
   display: flex;
   flex-direction: column;
   align-items: baseline;
@@ -58,15 +59,28 @@
   box-shadow: 0 10px 50px #413737; /* Shadow on the right side */
 }
 
+.App-mainarea {
+  flex: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .App-menubar {
   flex:auto;
   // background-color: #1f1c1c;
-  min-width: 5vh;
+  min-width: 6vh;
   min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+
+  border-right: 1px solid #525151;
+  border-left: 1px solid #525151;
+  box-shadow: 0 10px 50px #413737; /* Shadow on the right side */
   
   &-item {
     display: flex;
