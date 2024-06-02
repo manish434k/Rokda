@@ -44,6 +44,21 @@
    min-height: 10rem;
  }
 
+ .Table-cell_name{
+     text-align: left;
+     padding: 0.5rem;
+ }
+
+.Table-cell_sq{
+    text-align: center;
+}
+
+
+.Table-cell_symbol{
+    text-align: center;
+    font-weight: bold;
+}
+
 /* .Table-body-cell{
     text-wrap: wrap;
     font-size: large;
