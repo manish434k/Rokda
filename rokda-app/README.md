@@ -46,9 +46,18 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 To learn React, check out the [React documentation](https://reactjs.org/).
 
 
+# Handling Github CI 
+
+Refer nodejs.yml
+
+`npm ci` to install package dependency
+
+`npm install abcd --save-dev` to add dev dependency in package.json 
+
+# Useful developer info
 ## Sass command 
 
-Use below command to watch and compile a sacss file to css
+Use below command to watch and compile a scss file to css
 
 ### `sass --watch .:.`
 

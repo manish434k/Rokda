@@ -17,6 +17,15 @@
 			"problemMatcher": [],
 			"label": "npm: sass:watch - rokda-app",
 			"detail": "sass --watch --update .:."
+		},
+		{
+			"type": "npm",
+			"script": "build",
+			"path": "rokda-app",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: build - rokda-app",
+			"detail": "react-scripts build"
 		}
 	]
 }
