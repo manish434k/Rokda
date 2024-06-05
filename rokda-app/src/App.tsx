@@ -3,7 +3,7 @@ import React from 'react';
 import './Style';
 import Table from './Components/table/Table';
 import WatchList from './Components/watchlist/WatchList';
-import ResizableAndDraggableComponent from './Utils/slider';
+//import ResizableAndDraggableComponent from './Utils/slider';
 
 
 
