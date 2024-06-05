@@ -1,0 +1,28 @@
+.watchlist {
+  display: flex;
+  flex-direction: column;
+}
+.watchlist-listtitle {
+  text-align: left;
+  padding: 8px;
+}
+.watchlist-header {
+  /* justify-content: space-between; */
+  text-align: left;
+  /* padding: 1px 2px; */
+}
+.watchlist-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.watchlist-table th, .watchlist-table td {
+  padding: 8px;
+  font-size: small;
+  border-bottom: 1px solid #525151;
+}
+.watchlist-table th {
+  align-items: start;
+  color: gray;
+}
+
+/*# sourceMappingURL=WatchList.css.map */

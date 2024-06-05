@@ -1,0 +1,60 @@
+.TableHeader {
+  width: 100%;
+  font-size: large;
+  font-weight: bold;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.Table {
+  width: 100%;
+  border: 1px solid gray;
+  box-shadow: 0 10px 50px #413737; /* Shadow on the right side */
+  font-weight: normal;
+  padding: 0.5rem;
+}
+
+.Table-header {
+  text-align: right;
+  font-size: small;
+}
+
+.Table-header-row {
+  text-wrap: wrap;
+  font-size: small;
+  color: gray;
+}
+
+.Table-body {
+  text-align: right;
+  font-size: small;
+}
+
+.Table-row {
+  background-color: rgb(17, 16, 16);
+  min-height: 10rem;
+}
+
+.Table-cell_name {
+  text-align: left;
+  padding: 0.5rem;
+}
+
+.Table-cell_sq {
+  text-align: center;
+}
+
+.Table-cell_symbol {
+  text-align: center;
+  font-weight: bold;
+}
+
+/* .Table-body-cell{
+    text-wrap: wrap;
+    font-size: large;
+} */
+
+/*# sourceMappingURL=Table.css.map */
