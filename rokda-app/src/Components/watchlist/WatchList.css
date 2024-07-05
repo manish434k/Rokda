@@ -5,6 +5,18 @@
 .watchlist-listtitle {
   text-align: left;
   padding: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+}
+.watchlist-add {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.watchlist-add:hover {
+  background-color: #1f1c1c;
 }
 .watchlist-header {
   /* justify-content: space-between; */
@@ -23,6 +35,18 @@
 .watchlist-table th {
   align-items: start;
   color: gray;
+}
+
+.watchlist_container {
+  background-color: rgb(17, 16, 16);
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: flex-start;
+  color: white;
+  border-right: 1px solid #525151;
+  border-left: 1px solid #525151;
+  box-shadow: 0 10px 50px #413737; /* Shadow on the right side */
 }
 
 /*# sourceMappingURL=WatchList.css.map */
