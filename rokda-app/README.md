@@ -62,3 +62,8 @@ Use below command to watch and compile a scss file to css
 ### `sass --watch .:.`
 
 
+# Useful git command
+
+`git fetch origin`
+`git checkout <branchname>`
+
