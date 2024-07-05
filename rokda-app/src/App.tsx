@@ -1,9 +1,9 @@
 import React from 'react';
-
+import { useState } from 'react';
 import './Style';
 import Table from './Components/table/Table';
 import WatchList from './Components/watchlist/WatchList';
-//import ResizableAndDraggableComponent from './Utils/slider';
+
 
 
 
@@ -35,9 +35,38 @@ const data = [
       changePercentage: 10
     }
   ];
+
+
+  const WatchListButton = () => {
+    const [watchlistVisible, setWatchlistVisible] = useState(false);
   
+    const onClick = () => {
+      setWatchlistVisible(!watchlistVisible);
+    };
 
-
+    return (
+      <>
+      <div className='App-menubar'>
+        <div className='App-menubar-item'>
+          <button className='App-menubar-button' title='Watchlist' onClick={() => onClick()}>
+              <img width="35px" height="35px" src={require("./icons/list-icon.svg").default} alt="Watchlist" />
+          </button>
+        </div>
+      </div>
+        
+      {
+      
+      watchlistVisible && (
+        <div className='watchlist_container'>
+          <WatchList stocks={stocksData} />
+        </div>
+      )
+        
+      }
+        
+      </>
+    );
+  };
 
 function App() {
   return (
@@ -47,34 +76,11 @@ function App() {
           {"Rokda" }
         </div>
       </header>
-      
-      
-
       <div className='App-body'>
-      <div className='App-menubar'> 
-        <div className='App-menubar-item'>
-        <button className='App-menubar-button' title='Watchlist' onClick={() => {
-            const sidebar = document.querySelector('.App-sidebar') as HTMLElement;
-            sidebar.style.visibility = sidebar.style.visibility === 'hidden' ? 'visible' : 'hidden';
-          }}>
-            <img width = "35px" height = "35px" src={require("./icons/list-icon.svg").default} alt='Watchlist'/>
-          </button>
-        </div>
-        
-      </div>
-      {/* <ResizableAndDraggableComponent  
-      children = {
-       <div/>
-      }
-      
-      /> */}
-      <div className='App-sidebar' style={{ visibility: 'hidden' }}>
-        <WatchList stocks={stocksData}></WatchList>
-      </div>
-      
-        
-        <div className='App-mainarea'>
-           
+       
+        {WatchListButton()}
+     
+        <div className='App-mainarea'>       
           <Table tableHeader = {tableHeader} headers={headers} data={data}></Table>
         </div>
       </div>
@@ -84,3 +90,4 @@ function App() {
 }
 
 export default App;
+
