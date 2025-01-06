@@ -3,7 +3,7 @@ import { useState } from 'react';
 import './Style';
 import Table from './Components/table/Table';
 import WatchList from './Components/watchlist/WatchList';
-
+import FileUpload from './Components/fileupload/FileUpload';
 
 
 
@@ -49,7 +49,12 @@ const data = [
       <div className='App-menubar'>
         <div className='App-menubar-item'>
           <button className='App-menubar-button' title='Watchlist' onClick={() => onClick()}>
-              <img width="35px" height="35px" src={require("./icons/list-icon.svg").default} alt="Watchlist" />
+            <img width="35px" height="35px" src={require("./icons/home.svg").default} alt="Home" />
+          </button>
+        </div>
+        <div className='App-menubar-item'>  
+          <button className='App-menubar-button' title='Watchlist' onClick={() => onClick()}>
+            <img width="35px" height="35px" src={require("./icons/list-icon.svg").default} alt="Watchlist" />
           </button>
         </div>
       </div>
@@ -80,8 +85,13 @@ function App() {
        
         {WatchListButton()}
      
-        <div className='App-mainarea'>       
-          <Table tableHeader = {tableHeader} headers={headers} data={data}></Table>
+        <div className='App-mainarea'>
+          <div>
+            <FileUpload/>
+          </div>
+          <div>
+            <Table tableHeader = {tableHeader} headers={headers} data={data}></Table>
+          </div>
         </div>
       </div>
       
